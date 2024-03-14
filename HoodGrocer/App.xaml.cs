@@ -8,7 +8,7 @@ namespace HoodGrocer
         {
             InitializeComponent();
 
-            MainPage = new SignUpPage();
+            MainPage = new ProfilePage();
         }
     }
 }
