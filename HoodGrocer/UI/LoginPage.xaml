@@ -8,11 +8,11 @@
             Padding="30,0"
             Spacing="25">
 
-            <Entry Placeholder=" Name"/>
-            <Entry Placeholder=" Email Address"/>
-            <Entry Placeholder=" Password"/>
+            <Entry x:Name="_name" Placeholder="Name" Text="{Binding CurrentClient.Name}"/>
+            <Entry x:Name="_emailAddress" Placeholder="Email Address" Text="{Binding CurrentClient.EmailAddress}"/>
+            <Entry x:Name="_password" Placeholder="Password" Text="{Binding CurrentClient.Password}"/>
 
-            <Button Text="Save Data"/>
+
 
         </VerticalStackLayout>
     </ScrollView>

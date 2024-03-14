@@ -1,26 +1,32 @@
 using HoodGrocer.Models;
 using HoodGrocer.Services;
 
+
 namespace HoodGrocer.UI;
 
 public partial class LoginPage : ContentPage
 {
 
-	private HoodGrocerLocalDatabase _database;
+    private HoodGrocerLocalDatabase _database;
 
-	private Client currentclient;
+    private Client currentClient;
+    public Client CurrentClient
+    {
+        get { return currentClient; }
+        set
+        {
+            currentClient = value;
 
-	public Client Currentclient
-	{
-		get { return currentclient; }
-		set { currentclient = value; }
+            OnPropertyChanged();
+        }
+    }
 
-		OnPropertyChanged();
-
-	}
-
-	public LoginPage()
+    public LoginPage()
 	{
 		InitializeComponent();
+
 	}
+
+
+
 }

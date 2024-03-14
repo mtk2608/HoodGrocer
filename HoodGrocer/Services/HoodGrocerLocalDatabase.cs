@@ -1,5 +1,4 @@
 ﻿using HoodGrocer.Models;
-using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +12,7 @@ namespace HoodGrocer.Services
 {
     public class HoodGrocerLocalDatabase
     {
-        private SQLiteConnection _dbConnection;
+        public SQLiteConnection _dbConnection;
 
         public string GetDatabasePath()
         {
@@ -27,8 +26,47 @@ namespace HoodGrocer.Services
         {
             _dbConnection = new SQLiteConnection(GetDatabasePath());
 
+            _dbConnection.CreateTable<Client>();
 
+            SeedDatabase();
         }
+
+        public void SeedDatabase()
+        {
+            if (_dbConnection.Table<Client>().Count() == 0) 
+            {
+                Client client = new Client()
+                {
+                    Name = "Tayieb",
+                    Surname = "Kamaldien",
+                    ContactNumber = "012823737483",
+                    EmailAddress = "tayieb@gmail.com",
+                    Password = "tayieb11",
+                    Gender = "Male",
+                    DateofBirth = DateTime.Now,
+                    IDNumber = "022100020222",
+                    PhysicalAddress = "%@ fgdjfnfdohgdfcvnblckjh"
+                };
+
+                _dbConnection.Insert(client);
+            }
+        }
+
+        public void UpdateClient(Client client)
+        {
+            _dbConnection.Update(client);
+        }
+
+        public Client GetClientById(int id)
+        {
+            Client client = _dbConnection.Table<Client>().Where(x => x.ClientId == id).FirstOrDefault();
+
+            if (client != null)
+                _dbConnection.GetChildren(client, true);
+
+            return client;
+        }
+
     }
         
 }

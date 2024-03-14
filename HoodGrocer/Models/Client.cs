@@ -9,30 +9,24 @@ using SQLiteNetExtensions.Attributes;
 
 namespace HoodGrocer.Models
 {
-    public class Client 
+    public class Client
     {
         [PrimaryKey, AutoIncrement]
         public int ClientId { get; set; }
 
-        private string name;
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string ContactNumber { get; set; }
+        public string EmailAddress { get; set; }
+        public string Password { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateofBirth { get; set; }
+        public string IDNumber { get; set; }
+        public string PhysicalAddress { get; set; }
 
-        private string emailAddress;
-        public string EmailAddress
-        {
-            get { return emailAddress; } 
-            set {  emailAddress = value; } 
-        }
 
-        private string password;
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
     }
+
+
+
 }
