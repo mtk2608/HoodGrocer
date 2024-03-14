@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
+using SQLiteNetExtensions.Extensions;
+using SQLitePCL;
 
 namespace HoodGrocer.Services
 {
@@ -14,27 +17,18 @@ namespace HoodGrocer.Services
 
         public string GetDatabasePath()
         {
-            string filename = "hoodgrocerdata.db";
+            string filename = "hoodGrocer.db";
             string pathToDb = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
             return Path.Combine(pathToDb, filename);
         }
 
-        HoodGrocerLocalDatabase()
+        public HoodGrocerLocalDatabase()
         {
             _dbConnection = new SQLiteConnection(GetDatabasePath());
 
-            _dbConnection.CreateTable<Client>();
 
         }
-
-        public void SeedDatabase()
-        {
-            if (_dbConnection.Table<Client>().Count() == 0) 
-            {
-                Client client = new Client();
-            }
-        }
-
     }
         
 }
