@@ -1,4 +1,6 @@
-﻿namespace HoodGrocer
+﻿using HoodGrocer.UI;
+
+namespace HoodGrocer
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new LoginPage();
         }
     }
 }
