@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HoodGrocer.UI.HomePage"
              Title="HomePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid BackgroundColor="White" Margin="5">
+                <!-- Image -->
+                <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="100" Margin="5"/>
+
+                <!-- Item Details -->
+                <StackLayout Margin="5" VerticalOptions="EndAndExpand">
+                    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold"/>
+                    <Label Text="{Binding Price, StringFormat='{}${0:F2}'}" TextColor="Green"/>
+                    <Button Text="Add to Cart" HorizontalOptions="End" Margin="0,5,0,0"/>
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
 </ContentPage>

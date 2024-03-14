@@ -1,4 +1,5 @@
 ﻿using System;
+using HoodGrocer.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,13 +26,27 @@ namespace HoodGrocer.Services
         {
             itemConnection = new SQLiteConnection(GetDatabasePath());
 
-
+            itemConnection.CreateTable<Items>();
 
         }
 
         public void SeedItems()
         {
+            if(itemConnection.Table<Items>().Count() == 0)
+            {
+                Items item = new Items()
+                {
+                    ItemName = "Sasko White Bread",
+                    ItemPrice = ' ',
+                    ItemQuantity = ' ',
+                    ItemDescription = "20 Slice White Bread"
+                };
 
+                itemConnection.Insert(item);
+            }
         }
+
+
+
     }
 }
