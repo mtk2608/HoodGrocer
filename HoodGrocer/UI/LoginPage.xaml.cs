@@ -4,7 +4,7 @@ using SQLite;
 using SQLiteNetExtensions.Extensions;
 using SQLitePCL;
 
-namespace HoodGrocer;
+namespace HoodGrocer.UI;
 
 public partial class LoginPage : ContentPage
 {
@@ -40,8 +40,8 @@ public partial class LoginPage : ContentPage
 
 
     public LoginPage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         _dbConnection = new HoodGrocerLocalDatabase();
         BindingContext = this;
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HoodGrocer.Models
 {
-    public class Items
+    public class Product
     {
         [PrimaryKey, AutoIncrement]
         public int ItemsId { get; set; }
