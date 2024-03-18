@@ -11,9 +11,10 @@ namespace HoodGrocer.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ItemsId { get; set; }
+        public string ItemImage {  get; set; }
         public string ItemName { get; set; }
-        public decimal ItemPrice { get; set; }
-        public int ItemQuantity { get; set; }
+        public string ItemPrice { get; set; }
+        public string ItemQuantity { get; set; }
         public string ItemDescription { get; set; }
 
     }

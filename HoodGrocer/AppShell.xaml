@@ -7,9 +7,16 @@
     Shell.FlyoutBehavior="Disabled"
     Title="HoodGrocer">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab>
+            <ShellContent
+            Title="Login Page"
+            ContentTemplate="{DataTemplate local:LoginPage}"/>
+            
+            <ShellContent
+            Title="Product Page"
+            ContentTemplate="{DataTemplate local:ProductPage}"/>
+        </Tab>
+    </TabBar>
 
 </Shell>

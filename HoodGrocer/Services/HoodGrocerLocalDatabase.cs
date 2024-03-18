@@ -16,10 +16,10 @@ namespace HoodGrocer.Services
 
         public string GetDatabasePath()
         {
-            string filename = "hoodGrocer.db";
-            string pathToDb = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-            return Path.Combine(pathToDb, filename);
+            string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "hoodGrocer.db");
+
+            return databasePath;
         }
 
         public HoodGrocerLocalDatabase()

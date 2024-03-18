@@ -57,7 +57,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\airpop.jpeg" />
+	  <None Remove="Resources\Images\caesar.jpeg" />
+	  <None Remove="Resources\Images\daybreakerbread.jpeg" />
+	  <None Remove="Resources\Images\flour.jpeg" />
+	  <None Remove="Resources\Images\gosloscheese.jpeg" />
+	  <None Remove="Resources\Images\gosloschilli.jpeg" />
+	  <None Remove="Resources\Images\goslosperiperi.jpeg" />
+	  <None Remove="Resources\Images\hulletssugar.jpeg" />
+	  <None Remove="Resources\Images\milk.jpeg" />
 	  <None Remove="Resources\Images\saskowhitebread.png" />
+	  <None Remove="Resources\Images\strawberryairpop.png" />
+	  <None Remove="Resources\Images\yogisip.jpeg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,19 +81,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ProductPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="UI\CartPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="UI\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="UI\LoginPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	  <MauiXaml Update="UI\ProfilePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="UI\SignUpPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
