@@ -4,38 +4,39 @@
              x:Class="HoodGrocer.UI.DetailsPage"
              Title="DetailsPage">
     <ContentPage.Content>
-        <Grid RowDefinitions="350,300,150,55" RowSpacing="0" BindingContext="{Binding SelectedProduct}">
-            <StackLayout>
-                <Grid Grid.Row="0" BackgroundColor="White">
-                    <Label Grid.Column="0" Text="{Binding ItemName}" FontSize="30" FontAttributes="Bold"/>
-                </Grid>
-            </StackLayout>
-            <StackLayout Grid.Row="1" BackgroundColor="White" HeightRequest="350">
-                <Grid>
-                    <BoxView CornerRadius="0,0,0,0" Color="White" HeightRequest="350"/>
-                    <Grid ColumnDefinitions="*,Auto" HeightRequest="300" HorizontalOptions="FillAndExpand">
-                      <Image Grid.Column="1" Margin="10,20,10,20" Source="{Binding ItemImage}" HeightRequest="330" Aspect="AspectFit"/>
-                    </Grid>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto" RowSpacing="0" BindingContext="{Binding SelectedProduct}">
+            <StackLayout Grid.Row="0">
+                <Grid BackgroundColor="White">
+                    <Label Grid.Column="0" Text="{Binding ItemName}" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="0,30,0,0"/>
                 </Grid>
             </StackLayout>
 
-            <StackLayout Grid.Row="2" BackgroundColor="White" HeightRequest="300" WidthRequest="500" >
+            <StackLayout Grid.Row="1" BackgroundColor="White" HeightRequest="350">
+                <Grid>
+                    <BoxView CornerRadius="0,0,0,0" Color="White" HeightRequest="350"/>
+                    <Image Grid.Row="0" Grid.Column="0" Margin="10,20,10,20" Source="{Binding ItemImage}" HeightRequest="250"  Aspect="AspectFit"/>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" BackgroundColor="White" HeightRequest="300" WidthRequest="700" >
                 <Grid>
                     <Frame BorderColor="Black" >
                         <BoxView CornerRadius="0,0,0,0" Color="White" HeightRequest="300"/>
                     </Frame>
                     <Grid RowDefinitions="Auto,Auto,Auto,Auto" Padding="20,45,20,0" >
-                        
-                        <Label Grid.Row="1" Text="{Binding ItemPrice}" FontSize="30" FontAttributes="Bold"/>
-                        <Label Grid.Row="2" Text="{Binding ItemQuantity}" FontSize="25" Padding="0,15" TextColor="#2C363C" FontAttributes="Bold"/>
-                        <Label Grid.Row="3" Text="{Binding ItemDescription}" TextColor="Black"/>
-                        
+
+                        <Label Grid.Row="0" Text="{Binding ItemPrice}" FontSize="30" FontAttributes="Bold"/>
+                        <Label Grid.Row="1" Text="{Binding ItemQuantity}" FontSize="25" Padding="0,15" TextColor="#2C363C" FontAttributes="Bold"/>
+                        <Label Grid.Row="2" Text="{Binding ItemDescription}" TextColor="Black"/>
+
                     </Grid>
                 </Grid>
             </StackLayout>
 
-            <Button Text="Add to Cart" Grid.Row="2" CornerRadius="20" Command="{Binding Source={x:Reference DetailPage},Path=BindingContext.CartItemclick}" BackgroundColor="#2C363C" Margin="60,40" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"/>
-
+            <Button Text="Add to Cart" Grid.Row="3" CornerRadius="20" Command="{Binding Source={x:Reference DetailPage},Path=BindingContext.CartItemclick}"
+                    BackgroundColor="#2C363C" Margin="0,150,0,0" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"
+                    WidthRequest="300"/>
         </Grid>
     </ContentPage.Content>
+
 </ContentPage>

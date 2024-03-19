@@ -8,15 +8,21 @@
     Title="HoodGrocer">
 
     <TabBar>
-        <Tab>
+
             <ShellContent
-            Title="Login Page"
+            Title="Profile Page"
+            Icon="profile.png"
             ContentTemplate="{DataTemplate local:LoginPage}"/>
-            
+
             <ShellContent
             Title="Product Page"
+            Icon="store.png"
             ContentTemplate="{DataTemplate local:ProductPage}"/>
-        </Tab>
+
+            <ShellContent
+            Title="Cart"
+            Icon="cart.png"
+            ContentTemplate="{DataTemplate local:CartPage}"/>
     </TabBar>
 
 </Shell>
