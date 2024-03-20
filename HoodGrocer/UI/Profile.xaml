@@ -4,32 +4,18 @@
              x:Class="HoodGrocer.UI.LoginPage">
     <ScrollView>
         <VerticalStackLayout
-            Padding="20,0,20,0"
-             Spacing="25">
+            Padding="30,0"
+            Spacing="25">
 
-            <StackLayout WidthRequest="700">
-                <Label x:Name="_details" Text="Personal Details:" FontSize="Large" TextColor="Black"/>
-                <BoxView CornerRadius="15" Color="Black" BackgroundColor="White"/>
-                <Entry x:Name="_name" Placeholder="Name" Text="{Binding CurrentClient.Name}"/>
-                <Entry x:Name="_surname" Placeholder="Surname" Text="{Binding CurrentClient.Surname}"/>
-                <Entry x:Name="_contact" Placeholder="Contact Number" Text="{Binding CurrentClient.ContactNumber}"/>
-                <Entry x:Name="_emailAddress" Placeholder="Email Address" Text="{Binding CurrentClient.EmailAddress}"/>
-                <Entry x:Name="_password" Placeholder="Password" Text="{Binding CurrentClient.Password}" IsPassword="True"/>
-            </StackLayout>
-
-
-            <StackLayout WidthRequest="700">
-                <Label x:Name="_bio" Text="Bio:" FontSize="Large" TextColor="Black"/>
-                <BoxView CornerRadius="15" Color="Black" BackgroundColor="White"/>
-                <Entry x:Name="_gender" Placeholder="Gender" Text="{Binding CurrentClient.Gender}"/>
-                <Entry x:Name="_dateOfBirth" Placeholder="Date of Birth" Text="{Binding CurrentClient.DateofBirth}"/>
-                <Entry x:Name="_iDNumber" Placeholder="I.D Number" Text="{Binding CurrentClient.IDNumber}"/>
-                <Entry x:Name="_address" Placeholder="Physical Address" Text="{Binding CurrentClient.PhysicalAddress}"/>
-            </StackLayout>
-            
-
-            
-
+            <Entry x:Name="_name" Placeholder="Name" Text="{Binding CurrentClient.Name}"/>
+            <Entry x:Name="_surname" Placeholder="Surname" Text="{Binding CurrentClient.Surname}"/>
+            <Entry x:Name="_contact" Placeholder="Contact Number" Text="{Binding CurrentClient.ContactNumber}"/>
+            <Entry x:Name="_emailAddress" Placeholder="Email Address" Text="{Binding CurrentClient.EmailAddress}"/>
+            <Entry x:Name="_password" Placeholder="Password" Text="{Binding CurrentClient.Password}" IsPassword="True"/>
+            <Entry x:Name="_gender" Placeholder="Gender" Text="{Binding CurrentClient.Gender}"/>
+            <Entry x:Name="_dateOfBirth" Placeholder="Date of Birth" Text="{Binding CurrentClient.DateofBirth}"/>
+            <Entry x:Name="_iDNumber" Placeholder="I.D Number" Text="{Binding CurrentClient.IDNumber}"/>
+            <Entry x:Name="_address" Placeholder="Physical Address" Text="{Binding CurrentClient.PhysicalAddress}"/>
             
             <StackLayout Orientation="Horizontal" Spacing="80">
                 <Button Clicked="Save_Clicked" Text="Save" WidthRequest="300" HeightRequest="100"/>

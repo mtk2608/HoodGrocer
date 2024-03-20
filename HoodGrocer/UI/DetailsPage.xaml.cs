@@ -4,13 +4,15 @@ namespace HoodGrocer.UI;
 
 public partial class DetailsPage : ContentPage
 {
+    private readonly ProductViewModel _viewModel;
+    private readonly CartProductViewModel _cartViewModel;
 
-
-    public DetailsPage(ProductViewModel item)
+    public DetailsPage(CartViewModel cartViewModel)
 	{
 		InitializeComponent();
 		BindingContext = item;
-
+        _viewModel = (ProductViewModel)BindingContext;
+        _cartViewModel = cartViewModel;
     }
 
 
