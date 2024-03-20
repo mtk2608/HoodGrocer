@@ -34,14 +34,9 @@
                 </Grid>
             </StackLayout>
 
-<<<<<<< Updated upstream
-            <Button Text="Add to Cart" Grid.Row="3" CornerRadius="20" 
-                    BackgroundColor="#2C363C" Margin="0,150,0,0" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"
-=======
-            <Button Text="Add to Cart" Grid.Row="3" CornerRadius="20" BackgroundColor="#2C363C" Margin="0,150,0,0" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"
->>>>>>> Stashed changes
+        <Button Text="Add to Cart" Grid.Row="3" CornerRadius="20" 
+                    BackgroundColor="#2C363C" Margin="0,150,0,0" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Add to Cart" Grid.Row="3" CornerRadius="20" BackgroundColor="#2C363C" Margin="0,150,0,0" FontAttributes="Bold" HeightRequest="55" TextColor="White" VerticalOptions="CenterAndExpand"
                     WidthRequest="300"/>
-        </Grid>
-
-
+    </Grid>
 </ContentPage>
