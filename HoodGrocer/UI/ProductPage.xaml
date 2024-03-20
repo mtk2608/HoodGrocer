@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:p="clr-namespace:HoodGrocer.Models"
              x:Class="HoodGrocer.UI.ProductPage"
              Title="ProductPage">
     <ContentPage.Content>
@@ -12,7 +13,7 @@
             </BoxView>
             <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding Products}" RowHeight="120" SelectionMode="None">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="p:Product">
                         <ViewCell>
                             <Grid Margin="0,0,0,0" RowDefinitions="*,4" ColumnDefinitions="120,*,*">
 
