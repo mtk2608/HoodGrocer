@@ -4,7 +4,6 @@ namespace HoodGrocer.UI;
 
 public partial class DetailsPage : ContentPage
 {
-<<<<<<< Updated upstream
 
 
     public DetailsPage(ProductViewModel item)
@@ -12,12 +11,6 @@ public partial class DetailsPage : ContentPage
 		InitializeComponent();
 		BindingContext = item;
 
-=======
-    public DetailsPage(Product item)
-	{
-		InitializeComponent();
-		BindingContext = item;
->>>>>>> Stashed changes
     }
 
 
