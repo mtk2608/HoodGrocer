@@ -1,19 +1,32 @@
 using HoodGrocer.Models;
+using HoodGrocer.Services;
 
 namespace HoodGrocer.UI;
 
+[QueryProperty(nameof(Product), "CurrentProduct")]
 public partial class DetailsPage : ContentPage
 {
-    private readonly ProductViewModel _viewModel;
-    private readonly CartProductViewModel _cartViewModel;
+    private HoodGrocerLocalDatabase _dbConnection;
 
-    public DetailsPage(CartViewModel cartViewModel)
+    private Product currentProduct;
+    public Product CurrentProduct
+    {
+        get { return currentProduct; }
+        set
+        {
+            currentProduct = value;
+
+            OnPropertyChanged();
+        }
+    }
+
+    public DetailsPage()
 	{
 		InitializeComponent();
-		BindingContext = item;
-        _viewModel = (ProductViewModel)BindingContext;
-        _cartViewModel = cartViewModel;
+ 
+        BindingContext = this;
     }
+
 
 
 

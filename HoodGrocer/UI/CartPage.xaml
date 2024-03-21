@@ -4,26 +4,23 @@
              x:Class="HoodGrocer.UI.CartPage"
              xmlns:viewModels="clr-namespace:HoodGrocer.Models">
 
-    <ContentPage.BindingContext>
-        <viewModels:CartProductViewModel/>
-    </ContentPage.BindingContext>
-
     <StackLayout>
         <ListView ItemsSource="{Binding CartProducts}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Product.ItemName}" VerticalOptions="Center"/>
-                            <Label Text="{Binding Product.ItemPrice, StringFormat='Price: {0:C}'}" VerticalOptions="Center"/>
+                            <Label Text="{Binding CartName}" VerticalOptions="Center"/>
+                            <Label Text="{Binding CartTotal, StringFormat='Price: {0:C}'}" VerticalOptions="Center"/>
                             <Label Text="Quantity: " VerticalOptions="Center"/>
-                            <Entry Text="{Binding ItemQuantity}" Keyboard="Numeric"/>
-                            <Button Text="Remove" Clicked="OnRemoveClicked"/>
+                            <Entry Text="{Binding Quantity}" Keyboard="Numeric"/>
+
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Remove" Clicked="OnRemoveClicked" />
         <Label Text="{Binding TotalPrice, StringFormat='Total Price: {0:C}'}"/>
     </StackLayout>
     

@@ -25,6 +25,8 @@ namespace HoodGrocer.Models
         public string PhysicalAddress { get; set; }
 
 
+        [ForeignKey(typeof(CartProduct))]
+        public int CartID { get; set; } 
     }
 
 

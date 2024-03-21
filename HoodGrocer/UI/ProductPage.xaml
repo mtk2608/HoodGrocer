@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HoodGrocer.Models"
              x:Class="HoodGrocer.UI.ProductPage"
              Title="ProductPage">
     <ContentPage.Content>
@@ -10,7 +11,7 @@
 
 
             </BoxView>
-            <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding Products}" RowHeight="120" SelectionMode="None">
+            <ListView x:Name="ProductListView" Grid.Row="1" ItemsSource="{Binding Items}" RowHeight="120" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -51,12 +52,11 @@
                                     <Button  FontSize="13"
                                              Margin="0,0,10,0"
                                              BackgroundColor="#2C363C"
-                                             Text="View Details"
-                                             Command="{Binding Source={x:Reference listView},Path=BindingContext.ProductClick}"
-                                             CommandParameter="{Binding}"
+                                             Text="Add To Cart"
                                              TextColor="White"
                                              HeightRequest="40"
-                                             WidthRequest="70"/>
+                                             WidthRequest="70"
+                                             Clicked="Cart_Clicked"/>
                                 </Grid>
                             </Grid>
                         </ViewCell>

@@ -9,14 +9,7 @@ namespace HoodGrocer.Models
 {
     public class CartProductViewModel : BindableObject
     {
-        private ObservableCollection<CartProduct> _cartProducts = new ObservableCollection<CartProduct>();
-        public ObservableCollection<CartProduct> CartProducts 
-        { get => _cartProducts;
-
-            set {  _cartProducts = value; 
-                   OnPropertyChanged();
-            }
-        }
+        /*
 
         public decimal TotalPrice => CartProducts.Sum(items => items.Product.ItemPrice * items.Quantity);
 
@@ -38,6 +31,6 @@ namespace HoodGrocer.Models
         {
             CartProducts.Remove(items);
             OnPropertyChanged(nameof(TotalPrice));
-        }
+        }*/
     }
 }

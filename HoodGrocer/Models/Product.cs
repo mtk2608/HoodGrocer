@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,7 @@ namespace HoodGrocer.Models
         public string ItemQuantity { get; set; }
         public string ItemDescription { get; set; }
 
+        [OneToOne]
+        public Product product { get; set; }
     }
 }
